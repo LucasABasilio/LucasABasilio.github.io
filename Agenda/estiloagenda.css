@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color:#04C9F4;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    height: 5vh;
+    width: 100vw;
+    padding: 10px;
+}
+
+footer{
+    background-color:#fff;
+    color: #04C9F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    width: 100vw;
+}
+
+main{
+    background-color: #FEFBFB;
+    height: 90vh;
+    width: 100vw;
+    padding: 10px;
+}
+
+#informacao{
+    background-color: #D9D9D9;
+    display: grid;
+    grid-template-areas: 
+    "nome sobrenome"
+    "endereco endereco"
+    "telefone none";
+    width: 40vw;
+    height: 30vh;
+    padding: 10px;
+    gap: 10px;
+    grid-area: informacao;
+}
+
+#espaconome{
+    grid-area: nome;
+    input{
+        width: 18vw;
+        height: 5vh;
+    }
+}
+
+#espacosobrenome{
+    grid-area: sobrenome;
+    input{
+        width: 18vw;
+        height: 5vh;
+    }
+}
+
+#espacoendereco{
+    grid-area: endereco;
+    input{
+        width: 38vw;
+        height: 5vh;
+    }
+}
+
+#espacotelefone{
+    grid-area: telefone;
+    input{
+        width: 18vw;
+        height: 5vh;
+    }
+}
+
+input{
+    border: none;
+}
+
+label{
+    color: #fff;
+}
+
+#formulario{
+    display: grid;
+    grid-template-areas: 
+    "informacao botoesform";
+    width: 52vw;
+    height: 30vh;
+}
+
+.botoesform{
+    grid-area: botoesform;
+    display: grid;
+    gap: 1vh;
+    button{
+        border: none;
+        width: 10vw;
+        height: 5vh;
+    }
+}
+
+.incluirable{
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+}
+
+.editarable{
+    background-color: orange;
+    color: #fff;
+    cursor: pointer;
+}
+
+.salvarable{
+    background-color: #04C9F4;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cancelarable{
+    background-color: #fff;
+    color: #04C9F4;
+    cursor: pointer;
+}
+
+.excluirable{
+    background-color: red;
+    color: #fff;
+    cursor: pointer;
+}
+
+.botoesmover{
+    display: flex;
+    width: 40vw;
+}
+
+.botoesmover button{
+    margin: 10px;
+    border: none;
+    width: 5vw;
+    height: 5vh;
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+}
+
+#exibicao{
+    font-size: 25px;
+    margin: 50px;
+}
+
+@media screen and (max-width: 600px){
+    #formulario{
+        display: grid;
+        grid-template-areas: 
+        "informacao"
+        "botoesform";
+        width: 60vw;
+        height: 42vh;
+        gap: 1vh;
+    }
+
+    .botoesform{
+        grid-area: botoesform;
+        display: grid;
+        grid-template-areas: 
+        "incluir editar salvar"
+        "none excluir cancelar";
+        gap: 1vh;
+        button{
+            border: none;
+            width: 10vw;
+            height: 5vh;
+            font-size: 6px;
+        }
+    }
+
+    #botaoincluir{
+        grid-area: incluir;
+    }
+    #botaoeditar{
+        grid-area: editar;
+    }
+    #botaosalvar{
+        grid-area: salvar;
+    }
+    #botaoexcluir{
+        grid-area: excluir;
+    }
+    #botaocancelar{
+        grid-area: cancelar;
+    }
+    #informacao{
+        width: 60vw;
+    }
+    #espaconome input{
+        width: 25vw;
+    }
+    #espacosobrenome input{
+        width: 25vw;
+    }
+    #espacoendereco input{
+        width: 55vw;
+    }
+    #espacotelefone input{
+        width: 25vw;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .botoesform button{
+        font-size: 10px;
+    }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="estiloagenda.css">
+    <script src="agenda.js"></script>
+    <title>Agenda</title>
+</head>
+<body>
+    <header>
+        <p>Cadastro de Contato</p>
+    </header>
+    <main>
+        <form>
+            <section id="formulario">
+                <section id="informacao">
+                    <section id="espaconome">
+                        <section>
+                            <label for="nome">Nome</label>
+                        </section>
+                        <section>
+                            <input type="text" id="nome" disabled/>
+                        </section>
+                    </section>
+                    <section id="espacosobrenome">
+                        <section>
+                            <label for="sobrenome">Sobrenome</label>
+                        </section>
+                        <section>
+                            <input type="text" id="sobrenome" disabled/>
+                        </section>
+                    </section>
+                    <section id="espacoendereco">
+                        <section>
+                            <label for="endereco">Endereço</label>
+                        </section>
+                        <section>
+                            <input type="text" id="endereco" disabled/>
+                        </section>
+                    </section>
+                    <section id="espacotelefone">
+                        <section>
+                            <label for="telefone">Telefone</label>
+                        </section>
+                        <section>
+                            <input type="tel" id="telefone" pattern="[0-9]{2}-[0-9]{5}-[0-9]{4}" disabled/>
+                        </section>
+                    </section>
+                </section>
+                <section class="botoesform">
+                    <section id="incluir">
+                        <button id="botaoincluir" class="incluirable" onclick="incluir()">INCLUIR</button>
+                    </section>
+                    <section id="editar">
+                        <button id="botaoeditar" onclick="editar()" disabled>EDITAR</button>
+                    </section>
+                    <section id="salvar">
+                        <button id="botaosalvar" onclick="salvar()" disabled>SALVAR</button>
+                    </section>
+                    <section id="cancelar">
+                        <button id="botaocancelar" onclick="cancelar()" disabled>CANCELAR</button>
+                    </section>
+                    <section id="excluir">
+                        <button id="botaoexcluir" onclick="excluir()" disabled>EXCLUIR</button>
+                    </section>
+                </section>
+            </section>
+        </form>
+        <section class="botoesmover">
+            <section id="primeiro">
+                <button onclick="irparaprimeiro()"> |< </button>
+            </section>
+            <section id="moverantes">
+                <button onclick="irparaanterior()"> < </button>
+            </section>
+            <section id="moverproximo">
+                <button onclick="irparaproximo()"> > </button>
+            </section>
+            <section id="ultimo">
+                <button onclick="irparaultimo()"> >| </button>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <P>AGENDA DE CONTATOS</P>
+    </footer>
+</body>
+</html>
