@@ -67,3 +67,20 @@ img{
 .erro{
     border: solid 1px red;
 }
+
+@media screen and (max-width: 600px){
+    #login{
+        height: 45vh;
+        width: 80vw;
+    }
+    button{
+        font-size: 10px;
+        width: 20vw;
+    }
+    img{
+        width: 30vw;
+    }
+    input{
+        width: 70vw;
+    }
+}
